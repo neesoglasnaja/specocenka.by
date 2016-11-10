@@ -7,7 +7,7 @@ var postcss = require('gulp-postcss'),
 var csso = require('gulp-csso');
 
 var config = {
-    css: './src/styles/partials/*.css',
+    css: './src/styles/partials/**/*.css',
     mainCss: './src/styles/main.css',
     jade: './src/*.jade',
     js: './src/js/*.js',

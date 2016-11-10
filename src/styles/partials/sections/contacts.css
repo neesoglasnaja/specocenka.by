@@ -1,0 +1,16 @@
+.contacts {
+    font-size: 0;
+    &--form {
+        width: 60%;
+        font-size: 0;
+        vertical-align: top;
+        margin-top: 30px;
+        display: inline-block;
+    }
+    &--info {
+        display: inline-block;
+        width: 36%;
+        margin-left: 4%;
+        font-size: 1rem;
+    }
+}

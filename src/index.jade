@@ -38,9 +38,20 @@ html(dir='ltr', lang='ru')
         article.steps--item 1
         article.steps--item 1
         article.steps--item 1
-      section.contact-form
+      section.contacts
         h2 Связаться с нами
-        form
-          input(placeholder="")
-          button submit
-    footer Copy
+        form.contacts--form
+          input.input.__half(placeholder="Имя")
+          input.input.__half(placeholder="Email")
+          textarea.input(placeholder="Текст сообщения")
+          button.button Отправить письмо
+        .contacts--info
+          h3 Контактные данные
+          p г. Минск, Республика Беларусь 
+          p  Мобильный: +375 29 345-27-65, +375 29 765-84-33
+          p Телефон/факс: +375 17 280-43-41
+          p E-mail: specocenka@tut.by
+    footer 
+      span &copy; 2011–2016 СпецОценка.by
+      a.dev(href="http://ash-web.by" target="_blank") Разработано 
+        b.dev--link ash-web.by

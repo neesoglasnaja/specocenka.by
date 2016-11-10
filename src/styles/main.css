@@ -1,26 +1,38 @@
-@import 'partials/normalize.css';
-
-
-@import 'partials/typography.css';
-@import 'partials/header.css';
+@import 'partials/vendors/normalize.css';
+@import 'partials/vendors/typography.css';
+@import 'partials/sections/header.css';
+@import 'partials/sections/contacts.css';
+@import 'partials/sections/footer.css';
 
 main {
     padding: 40px 80px 80px;
 }
 
-footer {
-    background-color: #111;
-    border-top: 5px solid #ccc;
-    color: #aaa;
-    padding: 40px 80px;
-}
-
-.button{
+.button {
     background-color: #000;
     color: #fff;
+    font-size: 16px;
     text-transform: uppercase;
+    letter-spacing: 0.5pt;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-weight: bold;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    &.__half {
+        width: 48%;
+        & + & {
+            margin-left: 4%;
+        }
+    }
 }
