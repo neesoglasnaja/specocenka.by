@@ -1,0 +1,26 @@
+@import 'partials/normalize.css';
+
+
+@import 'partials/typography.css';
+@import 'partials/header.css';
+
+main {
+    padding: 40px 80px 80px;
+}
+
+footer {
+    background-color: #111;
+    border-top: 5px solid #ccc;
+    color: #aaa;
+    padding: 40px 80px;
+}
+
+.button{
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}

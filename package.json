@@ -1,0 +1,21 @@
+{
+  "name": "Specocenka.by",
+  "version": "2.0.0",
+  "description": "Source code for a website specocenka.by",
+  "author": "Aleksandra Shinkevich",
+  "homepage": "http://specocenka.by",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-stylus": "^2.3.0",
+    "gulp-watch": "^4.3.5",
+    "postcss-calc": "^5.2.1",
+    "postcss-easy-import": "^1.0.1",
+    "postcss-import": "^8.1.2",
+    "precss": "^1.4.0"
+  }
+}

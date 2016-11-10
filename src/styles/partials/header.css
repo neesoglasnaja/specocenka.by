@@ -1,0 +1,24 @@
+.logo {
+    display: inline-block;
+    color: #000;
+    border: 3px solid #000;
+    padding: 15px 30px;
+    font-family: "Merriweather", serif;
+    font-size: 30px;
+}
+
+.menu {
+    display: inline-block;
+    &--item {
+        display: inline-block;
+        a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #666;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+            font-size: 14px;
+        }
+    }
+}
