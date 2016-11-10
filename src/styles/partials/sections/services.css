@@ -1,0 +1,12 @@
+.services {
+    font-size: 0;
+    &--item {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 48%;
+        font-size: 1rem;
+        &:nth-child(odd){
+            margin-left: 4%;
+        }
+    }
+}
