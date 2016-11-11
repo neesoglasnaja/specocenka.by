@@ -26,7 +26,7 @@ $color-main: #125171;
             color: #666;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.5pt;
+            letter-spacing: 1pt;
             font-size: 14px;
             line-height: 2;
             transition: color 0.5s, border 0.5s;
