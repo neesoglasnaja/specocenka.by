@@ -1,3 +1,4 @@
+$color-main: #125171;
 .logo {
     display: inline-block;
     color: #000;
@@ -5,20 +6,79 @@
     padding: 15px 30px;
     font-family: "Merriweather", serif;
     font-size: 30px;
+    text-decoration: none;
+    transition: color 0.5s, border 0.5s;
+    &:hover,
+    &:focus {
+        color: $color-main;
+        border-color: $color-main;
+    }
 }
 
 .menu {
     display: inline-block;
     &--item {
         display: inline-block;
+        position: relative;
         a {
-            padding: 10px 20px;
+            padding: 20px;
             text-decoration: none;
             color: #666;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5pt;
             font-size: 14px;
+            line-height: 2;
+            transition: color 0.5s, border 0.5s;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            &:hover,
+            &:focus {
+                color: $color-main;
+                border-color: $color-main;
+            }
+            &.__arrow {
+                &:after {
+                    content: '';
+                    top: 27px;
+                    right: 4px;
+                    display: block;
+                    width: 7px;
+                    height: 7px;
+                    border: 2px solid #aaa;
+                    border-bottom: none;
+                    border-left: none;
+                    transform: rotate(135deg);
+                    position: absolute;
+                }
+            }
+        }
+        &:hover {
+            .menu--submenu {
+                opacity: 1;
+                transform: translateY(-2px);
+                visibility: visible;
+            }
+        }
+    }
+    &--submenu {
+        visibility: hidden;
+        border: 1px solid #eee;
+        transform: translateY(10px);
+        padding: 10px 0;
+        opacity: 0;
+        top: 100%;
+        left: 0;
+        position: absolute;
+        min-width: 300px;
+        background-color: #fff;
+        transition: opacity 0.5s, transform 0.5s;
+        list-style-type: none;
+        a{
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
     }
 }

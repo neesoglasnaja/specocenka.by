@@ -4,6 +4,11 @@ $baseFontSize: 18;
 $baseLineHeight: 1.5;
 $leading: calc($baseLineHeight * 1rem);
 $scale: 1.414;
+$textColor: #666;
+$subheaderColor: #222;
+$color-main: #125171;
+$color-main--light: #86adca;
+$color-main--dark: #003252;
 
 /* Setup */
 
@@ -21,6 +26,18 @@ p {
     line-height: $leading;
     margin-top: $leading;
     margin-bottom: 0;
+    color: $textColor;
+    a {
+        text-decoration: none;
+        color: $color-main;
+        border-bottom: 1px solid $color-main--light;
+        transition: color 0.5s, border 0.5s;
+        &:hover,
+        &:focus{
+            color: $color-main--dark;
+            border-bottom-color: $color-main;
+        }
+    }
 }
 
 ul,
@@ -75,6 +92,7 @@ h2 {
 
 h3 {
     font-size: calc(1 * $scale * 1rem);
+    color: $subheaderColor;
 }
 
 h4 {

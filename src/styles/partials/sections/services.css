@@ -1,6 +1,7 @@
 .services {
     font-size: 0;
     &--item {
+        padding-left:  100px;
         box-sizing: border-box;
         display: inline-block;
         width: 48%;

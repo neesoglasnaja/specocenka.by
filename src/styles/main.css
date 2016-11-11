@@ -4,7 +4,7 @@
 @import 'partials/sections/services.css';
 @import 'partials/sections/contacts.css';
 @import 'partials/sections/footer.css';
-
+$color-main: #125171;
 main {
     padding: 40px 80px 80px;
 }
@@ -19,6 +19,11 @@ main {
     border: none;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.5s;
+    &:hover,
+    &:focus{
+        background-color: $color-main;
+    }
 }
 
 .input {
