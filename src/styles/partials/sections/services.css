@@ -1,13 +1,21 @@
 .services {
     font-size: 0;
     &--item {
-        padding-left:  100px;
+        padding-left: 100px;
         box-sizing: border-box;
         display: inline-block;
         width: 48%;
         font-size: 1rem;
-        &:nth-child(odd){
+        position: relative;
+        vertical-align: top;
+        &:nth-child(odd) {
             margin-left: 4%;
         }
+    }
+    &--icon {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 64px;
     }
 }
