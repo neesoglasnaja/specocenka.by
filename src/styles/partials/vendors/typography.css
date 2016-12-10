@@ -87,7 +87,8 @@ h1 {
 h2 {
     font-size: calc(2 * $scale * 1rem);
     line-height: calc(2 * $leading);
-    margin-top: calc(2 * $leading);
+    margin-top: calc(3 * $leading);
+    margin-bottom: calc($leading);
 }
 
 h3 {

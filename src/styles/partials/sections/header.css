@@ -8,6 +8,7 @@ $color-main: #125171;
     font-size: 30px;
     text-decoration: none;
     transition: color 0.5s, border 0.5s;
+    vertical-align: baseline;
     &:hover,
     &:focus {
         color: $color-main;
@@ -17,6 +18,8 @@ $color-main: #125171;
 
 .menu {
     display: inline-block;
+    vertical-align: baseline;
+    margin: 0;
     &--item {
         display: inline-block;
         position: relative;
@@ -76,9 +79,23 @@ $color-main: #125171;
         background-color: #fff;
         transition: opacity 0.5s, transform 0.5s;
         list-style-type: none;
-        a{
+        a {
             padding-top: 5px;
             padding-bottom: 5px;
         }
+    }
+}
+
+.phone-number {
+    float: right;
+    margin-top: 30px;
+    img {
+        width: 24px;
+        vertical-align: middle;
+        margin-right: 3px;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
     }
 }
