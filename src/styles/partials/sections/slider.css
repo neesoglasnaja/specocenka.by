@@ -28,7 +28,8 @@
                 height: auto;
                 min-width: 100%;
                 min-height: 100%;
-                float: right;
+                transform: translateX(-50%);
+                margin-left: 50%;
             }
         }
     }
