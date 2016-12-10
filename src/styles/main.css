@@ -3,6 +3,7 @@
 @import 'partials/sections/header.css';
 @import 'partials/sections/slider.css';
 @import 'partials/sections/services.css';
+@import 'partials/sections/stepline.css';
 @import 'partials/sections/contacts.css';
 @import 'partials/sections/footer.css';
 $color-main: #125171;
