@@ -1,4 +1,11 @@
 $color-main: #125171;
+$tablet-width: 1360px;
+$tablet-mid-width: 1100px;
+$mobile-width: 1000px;
+header {
+    position: relative;
+}
+
 .logo {
     display: inline-block;
     color: #000;
@@ -16,15 +23,73 @@ $color-main: #125171;
     }
 }
 
+nav {
+    display: inline-block;
+    @media(max-width: $mobile-width) {
+        display: block;
+    }
+}
+
+.toggle {
+    &--checkbox {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        @media(max-width: $mobile-width) {
+            &:checked {
+                & ~ label {
+                    background-color: green;
+                }
+                & ~ .menu {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &--button {
+        display: none;
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        @media(max-width: $mobile-width) {
+            display: block;
+        }
+        span {
+            width: 100%;
+            height: 3px;
+            background-color: red;
+        }
+    }
+}
+
 .menu {
     display: inline-block;
     vertical-align: baseline;
     margin: 0;
+    @media(max-width: $tablet-width) {
+        padding-left: 20px;
+    }
+    @media(max-width: $mobile-width) {
+        display: none;
+        padding: 15px 0;
+        border: 1px solid #eee;
+        margin-top: 20px;
+    }
     &--item {
         display: inline-block;
         position: relative;
+        @media(max-width: $mobile-width) {
+            width: 100%;
+        }
         a {
-            padding: 20px;
+            padding: 20px 15px;
             text-decoration: none;
             color: #666;
             font-weight: bold;
@@ -37,6 +102,10 @@ $color-main: #125171;
             display: inline-block;
             width: 100%;
             box-sizing: border-box;
+            @media(max-width: $mobile-width) {
+                line-height: 1;
+                padding: 10px 30px;
+            }
             &:hover,
             &:focus {
                 color: $color-main;
@@ -44,6 +113,9 @@ $color-main: #125171;
             }
             &.__arrow {
                 &:after {
+                    @media(max-width: $mobile-width) {
+                        display: none;
+                    }
                     content: '';
                     top: 27px;
                     right: 4px;
@@ -79,6 +151,15 @@ $color-main: #125171;
         background-color: #fff;
         transition: opacity 0.5s, transform 0.5s;
         list-style-type: none;
+        @media(max-width: $mobile-width) {
+            visibility: visible;
+            position: relative;
+            opacity: 1;
+            transform: none !important;
+            border: none;
+            margin-left: 30px;
+            padding: 0 0 10px 0;
+        }
         a {
             padding-top: 5px;
             padding-bottom: 5px;

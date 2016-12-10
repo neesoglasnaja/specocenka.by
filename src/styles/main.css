@@ -7,8 +7,17 @@
 @import 'partials/sections/contacts.css';
 @import 'partials/sections/footer.css';
 $color-main: #125171;
-main {
-    padding: 40px 440px 80px 80px;
+$tablet-width: 1360px;
+$tablet-mid-width: 1100px;
+$mobile-width: 1000px;
+main { 
+    padding: 40px calc(30% + 40px) 80px 80px;
+    @media(max-width: $tablet-width){
+        padding-right: calc(20% + 40px);
+    }
+    @media(max-width: $tablet-mid-width){
+        padding-right: calc(10% + 40px);
+    }
 }
 
 .button {
@@ -23,7 +32,7 @@ main {
     font-weight: bold;
     transition: background 0.5s;
     &:hover,
-    &:focus{
+    &:focus {
         background-color: $color-main;
     }
 }

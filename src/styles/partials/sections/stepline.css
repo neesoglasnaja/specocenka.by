@@ -9,7 +9,7 @@
         list-style-type: none;
         display: inline-block;
         padding-left: 0;
-        width: 600px;
+        width: 600px;        
         &--item {
             counter-increment: steps;
             position: relative;

@@ -10,20 +10,23 @@ html(dir='ltr', lang='ru')
     main
       header 
         a.logo(href="/") СпецОценка.by
-        ul.menu
-          li.menu--item
-            a.__arrow(href="") Оценка
-            ul.menu--submenu
-              li
-                a(href="") Земельные участки
-              li
-                a(href="") Недвижимость
-              li
-                a(href="") Оборудование и транспорт
-          li.menu--item
-            a(href="") Бизнес-планирование
-          li.menu--item
-            a(href="") О нас
+        nav
+          input.toggle--checkbox(type="checkbox", id="menu")
+          label(for="menu").toggle--button
+          ul.menu
+            li.menu--item
+              a.__arrow(href="") Оценка
+              ul.menu--submenu
+                li
+                  a(href="") Земельные участки
+                li
+                  a(href="") Недвижимость
+                li
+                  a(href="") Оборудование и транспорт
+            li.menu--item
+              a(href="") Бизнес-планирование
+            li.menu--item
+              a(href="") О нас
         //- .phone-number
         //-   img(src="img/icons/phone.svg")
         //-   a(href="") +375 29 345-27-65
