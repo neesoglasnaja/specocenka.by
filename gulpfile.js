@@ -5,13 +5,14 @@ var browserSync = require('browser-sync').create();
 var postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer');
 var csso = require('gulp-csso');
+var image = require('gulp-image');
 
 var config = {
     css: './src/styles/partials/**/*.css',
     mainCss: './src/styles/main.css',
     jade: './src/*.jade',
     js: './src/js/*.js',
-    images: './src/images/*',
+    images: './src/img/**',
     html: "./*.html",
     dist: "./public"
 };
@@ -43,6 +44,12 @@ gulp.task('css', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('images', function () {
+  gulp.src(config.images)
+    .pipe(image())
+    .pipe(gulp.dest(config.dist + '/img'));
+});
+
 gulp.task('js', function() {
     return gulp.src(config.js)
         .pipe(gulp.dest(config.dist + '/js'))
@@ -60,6 +67,9 @@ gulp.task('default', function() {
     });
     gulp.watch([config.css, config.mainCss], function(event) {
         gulp.run('css');
+    });
+    gulp.watch(config.images, function(event) {
+        gulp.run('images');
     });
     gulp.watch(config.js, function(event) {
         gulp.run('js');

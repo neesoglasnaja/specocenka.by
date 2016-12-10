@@ -1,12 +1,13 @@
 @import 'partials/vendors/normalize.css';
 @import 'partials/vendors/typography.css';
 @import 'partials/sections/header.css';
+@import 'partials/sections/slider.css';
 @import 'partials/sections/services.css';
 @import 'partials/sections/contacts.css';
 @import 'partials/sections/footer.css';
 $color-main: #125171;
 main {
-    padding: 40px 80px 80px;
+    padding: 40px 440px 80px 80px;
 }
 
 .button {

@@ -2,7 +2,7 @@ footer {
     background-color: #111;
     border-top: 5px solid #ccc;
     color: #aaa;
-    padding: 40px 80px;
+    padding: 40px 440px 40px 80px;
     .dev {
         float: right;
         opacity: 0.25;
