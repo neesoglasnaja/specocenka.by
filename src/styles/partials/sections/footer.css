@@ -3,6 +3,16 @@ footer {
     border-top: 5px solid #ccc;
     color: #aaa;
     padding: 40px 440px 40px 80px;
+    padding: 40px calc(30% + 40px) 40px 80px;
+    @media(max-width: $tablet-width) {
+        padding-right: calc(20% + 40px);
+    }
+    @media(max-width: $tablet-mid-width) {
+        padding-right: calc(10% + 40px);
+    }
+    @media(max-width: $mobile-mid-width) {
+        padding-left: 20px;
+    }
     .dev {
         float: right;
         opacity: 0.25;
@@ -11,6 +21,11 @@ footer {
         text-decoration: none;
         &:hover {
             opacity: 1;
+        }
+        @media(max-width: $mobile-mid-width) {
+            float: none;
+            display: block;
+            margin-top: 30px;
         }
         &--link {
             color: #fff;

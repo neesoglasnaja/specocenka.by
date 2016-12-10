@@ -1,3 +1,4 @@
+@import './variables.css';
 @import 'partials/vendors/normalize.css';
 @import 'partials/vendors/typography.css';
 @import 'partials/sections/header.css';
@@ -6,17 +7,31 @@
 @import 'partials/sections/stepline.css';
 @import 'partials/sections/contacts.css';
 @import 'partials/sections/footer.css';
-$color-main: #125171;
-$tablet-width: 1360px;
-$tablet-mid-width: 1100px;
-$mobile-width: 1000px;
-main { 
+main {
     padding: 40px calc(30% + 40px) 80px 80px;
-    @media(max-width: $tablet-width){
+    min-width: 240px;
+    @media(max-width: $tablet-width) {
         padding-right: calc(20% + 40px);
     }
-    @media(max-width: $tablet-mid-width){
+    @media(max-width: $tablet-mid-width) {
         padding-right: calc(10% + 40px);
+    }
+    @media(max-width: $mobile-mid-width) {
+        padding-left: 20px;
+        padding-right: calc(10% + 20px);
+        h1 {
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+    & > header,
+    & > section {
+        max-width: 1000px;
+        margin: 0 auto;
     }
 }
 
@@ -46,10 +61,18 @@ main {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 20px;
+    transition: border 0.3s;
+    &:focus {
+        border-bottom-color: $color-main;
+    }
     &.__half {
         width: 48%;
         & + & {
             margin-left: 4%;
         }
     }
+}
+
+textarea {
+    height: 120px;
 }

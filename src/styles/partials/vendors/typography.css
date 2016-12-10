@@ -6,10 +6,6 @@ $leading: calc($baseLineHeight * 1rem);
 $scale: 1.414;
 $textColor: #666;
 $subheaderColor: #222;
-$color-main: #125171;
-$color-main--light: #86adca;
-$color-main--dark: #003252;
-
 /* Setup */
 
 html {
@@ -88,7 +84,18 @@ h2 {
     font-size: calc(2 * $scale * 1rem);
     line-height: calc(2 * $leading);
     margin-top: calc(3 * $leading);
-    margin-bottom: calc($leading);
+    margin-bottom: calc(2 * $leading);
+    text-align: center;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 42%;
+        width: 16%;
+        height: 0px;
+        bottom: -30px;
+        border-bottom: 5px double $color-main--light;
+    }
 }
 
 h3 {

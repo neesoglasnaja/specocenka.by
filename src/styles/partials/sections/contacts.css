@@ -6,11 +6,37 @@
         vertical-align: top;
         margin-top: 30px;
         display: inline-block;
+        margin-left: 4%;
+        h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: none;
+        }
+        @media (max-width: $mobile-width) {
+            h3 {
+            margin-top: 20px;
+                display: block;
+            }
+        }
+        @media (max-width: $mobile-mid-width) {
+            .input.__half {
+                width: 100%;
+                & + .input.__half {
+                    margin-left: 0;
+                }
+            }
+        }
     }
     &--info {
         display: inline-block;
         width: 36%;
-        margin-left: 4%;
         font-size: 1rem;
+    }
+    @media (max-width: $mobile-width) {
+        &--form,
+        &--info {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }

@@ -11,11 +11,28 @@
         &:nth-child(odd) {
             margin-left: 4%;
         }
+        @media (max-width: $mobile-width) {
+            width: 100%;
+            margin-left: 0 !important;
+        }
+        @media (max-width: $mobile-small-width) {
+            padding-left: 0;
+        }
+    }
+    &--wrap {
+        @media (max-width: $mobile-small-width) {
+            padding-left: 50px;
+            position: relative;
+        }
     }
     &--icon {
         position: absolute;
         top: 30px;
         left: 0;
         width: 64px;
+        @media (max-width: $mobile-small-width) {
+            top: 10px;
+            width: 32px;
+        }
     }
 }
