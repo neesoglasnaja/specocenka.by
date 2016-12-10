@@ -41,6 +41,11 @@ main {
     }
 }
 
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .button {
     color: $color-main;
     font-size: 16px;
