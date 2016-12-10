@@ -15,7 +15,7 @@
             padding-left: 60px;
             margin-bottom: 40px;
             text-align: left;
-            &:last-child{
+            &:last-child {
                 margin-bottom: 0;
             }
             &:before {
@@ -45,6 +45,9 @@
                 left: 31px;
                 position: absolute;
                 top: 9px;
+            }
+            p {
+                color: #222;
             }
         }
     }

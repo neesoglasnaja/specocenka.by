@@ -41,6 +41,7 @@ nav {
         left: 0;
         width: 0;
         height: 0;
+        z-index: -10000;
         @media(max-width: $mobile-width) {
             &:checked {
                 & ~ .toggle--button {
@@ -116,6 +117,7 @@ nav {
     display: inline-block;
     vertical-align: baseline;
     margin: 0;
+    font-size: 0;
     @media(max-width: $tablet-width) {
         padding-left: 20px;
         box-sizing: border-box;
@@ -129,13 +131,14 @@ nav {
     &--item {
         display: inline-block;
         position: relative;
+        font-size: 14px;
         @media(max-width: $mobile-width) {
             width: 100%;
         }
         a {
-            padding: 20px 15px;
+            padding: 7px 12px;
             text-decoration: none;
-            color: #666;
+            color: $color-main;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1pt;
@@ -146,23 +149,25 @@ nav {
             display: inline-block;
             width: 100%;
             box-sizing: border-box;
+            transition: background 0.3s, color 0.3s;
+            &:hover,
+            &:focus {
+                background-color: $color-main;
+                color: #fff;
+            }
             @media(max-width: $mobile-width) {
                 line-height: 1;
                 padding: 10px 30px;
             }
-            &:hover,
-            &:focus {
-                color: $color-main;
-                border-color: $color-main;
-            }
             &.__arrow {
+                padding-right: 30px;
                 &:after {
                     @media(max-width: $mobile-width) {
                         display: none;
                     }
                     content: '';
-                    top: 27px;
-                    right: 4px;
+                    top: 14px;
+                    right: 13px;
                     display: block;
                     width: 7px;
                     height: 7px;

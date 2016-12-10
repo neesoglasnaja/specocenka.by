@@ -35,20 +35,28 @@ main {
     }
 }
 
+.main {
+    p {
+        color: #222;
+    }
+}
+
 .button {
-    background-color: #000;
-    color: #fff;
+    color: $color-main;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1pt;
     padding: 10px 20px;
-    border: none;
+    border: 5px double $color-main--light;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.5s;
+    background: transparent;
+    transition: background 0.3s, color 0.3s;
     &:hover,
     &:focus {
         background-color: $color-main;
+        border-color: $color-main;
+        color: #fff;
     }
 }
 
