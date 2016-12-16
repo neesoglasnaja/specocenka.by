@@ -35,4 +35,10 @@
             width: 32px;
         }
     }
+    &.__full {
+        .services--item {
+            width: 100%;
+            margin-left: 0 !important;
+        }
+    }
 }

@@ -3,6 +3,5 @@ var domReady = function(callback) {
 };
 
 domReady(function() {
-    console.log('hell!');
     Slider.init();
 });

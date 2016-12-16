@@ -2,6 +2,7 @@ extends ../partials/layout
 
 block head
   +head('О нас')
+  script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=cd226Rj9CzeomLbniyBBKwXZ6kqscdKq&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=map")
 
 block menu
   +menu('about')
@@ -11,6 +12,10 @@ block body
 
   section.main
     h1 О нас
-    p hello
+    p Мы оценили более 1000 объектов по всей Беларуси и за ее пределами.
+  section
+    h2 Объекты оценки 
+    div#map
 
+  
   
