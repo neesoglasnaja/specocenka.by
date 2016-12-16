@@ -8,11 +8,11 @@ var csso = require('gulp-csso');
 var image = require('gulp-image');
 
 var config = {
-    css: './src/styles/partials/**/*.css',
-    mainCss: './src/styles/main.css',
-    jade: './src/*.jade',
-    js: './src/js/*.js',
-    images: './src/img/**',
+    css: './src/assets/styles/partials/**/*.css',
+    mainCss: './src/assets/styles/main.css',
+    jade: './src/**/index.jade',
+    js: './src/assets/js/*.js',
+    images: './src/assets/img/**',
     html: "./*.html",
     dist: "./public"
 };
@@ -40,19 +40,19 @@ gulp.task('css', function() {
             sourceMap: true,
             debug: true
         }))
-        .pipe(gulp.dest(config.dist + '/css'))
+        .pipe(gulp.dest(config.dist + '/assets/css'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('images', function () {
   gulp.src(config.images)
     .pipe(image())
-    .pipe(gulp.dest(config.dist + '/img'));
+    .pipe(gulp.dest(config.dist + '/assets/img'));
 });
 
 gulp.task('js', function() {
     return gulp.src(config.js)
-        .pipe(gulp.dest(config.dist + '/js'))
+        .pipe(gulp.dest(config.dist + '/assets/js'))
         .pipe(browserSync.stream());
 });
 

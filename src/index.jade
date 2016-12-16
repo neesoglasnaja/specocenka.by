@@ -1,137 +1,64 @@
-doctype html
-html(dir='ltr', lang='ru')
-  head
-    meta(http-equiv='content-type', content='text/html; charset=utf-8')    
-    link(href='https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans&subset=cyrillic', rel='stylesheet')
-    link(href='css/main.css', rel='stylesheet')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Sample title
-  body
-    main
-      header 
-        a.logo(href="/") СпецОценка.by
-        nav
-          input.toggle--checkbox(type="checkbox", id="menu")
-          label(for="menu").toggle--button
-            span
-          ul.menu
-            li.menu--item
-              a.__arrow(href="") Оценка
-              ul.menu--submenu
-                li
-                  a(href="") Земельные участки
-                li
-                  a(href="") Недвижимость
-                li
-                  a(href="") Оборудование и транспорт
-            li.menu--item
-              a(href="") Бизнес-планирование
-            li.menu--item
-              a(href="") О нас
-        //- .phone-number
-        //-   img(src="img/icons/phone.svg")
-        //-   a(href="") +375 29 345-27-65
+extends ./partials/layout
 
-      section.slider
-        ul.slides
-          li.slides--item
-            img(src="img/slides/1.jpg")
-          li.slides--item
-            img(src="img/slides/2.jpg")
-          li.slides--item
-            img(src="img/slides/3.jpg")
+block head
+  +head
 
-      section.main
-        h1 Любые работы по оценке
-        p Мы 
-          b оценим
-          |  для вас 
-          b практически всё
-          |  , кроме золота, бриллиантов и оружия.
-        p Не зависимо от того, кто вы (физическое или юридическое лицо) и 
-          b вы имеете имущество
-          | , то 
-          b мы определим, сколько оно стоит для продажи, залога, аренды
-          |  и 
-          b других целей
-          | .
-        p Если же 
-          b вы не имеете имущества
-          | , но очень хотите его приобрести, получить в подарок, наследовать, выменять, одолжить, заказать, построить, то 
-          b мы определим, сколько оно стоит для вас
-          | , а вы уже сами решите – нужно ли вам это имущество по такой цене.
-        p Если вы хотите узнать, как будет, или как может развиваться ваш бизнес, то 
-          b мы разработаем 
-          | вам 
-          b бизнес-план 
-          |  или 
-          b серьезный инвестиционный проект
-          | , который станет вашим надежным помощником.
-        p
-          a.button(href="#contacts") Обратитесь к нам
-      section.services
-        h2 Наши услуги
-        article.services--item
-          h3 Земельные участки
-          .services--wrap
-            p Оценка для кредитования под залог, лизинга, страхования, отчуждения, постановки на баланс, внесения в установочный фонд, переоценки основных средств, судебных рабирательств
-            img.services--icon(src="img/icons/land.svg")
-        article.services--item 
-          h3 Недвижимость
-          .services--wrap
-            p Жилые, коммерческие и производственные объекты. Здания, сооружения, дома, квартиры, офисы
-            img.services--icon(src="img/icons/realestate.svg")
-        article.services--item 
-          h3 Оборудование и&nbsp;транспорт
-          .services--wrap
-            p Станки, приборы, мебель, технологические комплексы и поточные линии, офисное и другое оборудование и т.д. Автомобили, машины, железнодорожная, воздушная и другая техника
-            img.services--icon(src="img/icons/tools.svg")
-        article.services--item 
-          h3 Бизнес-планирование
-          .services--wrap
-            p 
-              a(href="") Разработка бизнес-планов
-              | , которые соответствуют требованиям международного стандарта UNIDO
-            img.services--icon(src="img/icons/analysis.svg")
-      section.stepline
-        h2 Как мы работаем
-        ol.steps
-          li.steps--item
-            p Позвоните нам по телефону 
-              a(href="tel:+375293452765") +375 29 345-27-65
-              |  или обратитесь через контактную форму на сайте
-          li.steps--item
-            p Мы подпишем с вами договор и задание на оценку
-          li.steps--item
-            p Мы согласуем с вами дату и время осмотра имущества
-          li.steps--item
-            p Вы встретитесь с оценщиком на осмотре имущества
-          li.steps--item
-            p К оговоренному сроку вы получите заключение и отчет об оценке
-      section.contacts
-        h2(id="contacts") Связаться с&nbsp;нами
-        .contacts--info
-          h3 Контактные данные
-          p г. Минск, Республика Беларусь 
-          p Мобильный: 
-            a(href="tel:+375293452765") +375 29 345-27-65
-            | , 
-            a(href="tel:+375297658433") +375 29 765-84-33
-          p Телефон/факс: 
-            a(href="tel:+375172804341") +375 17 280-43-41
-          p E-mail: 
-            a(href="mailto:info@specocenka.by") info@specocenka.by
-        form.contacts--form
-          h3 Напишите нам
-          input.input.__half(placeholder="Имя")
-          input.input.__half(placeholder="Email")
-          textarea.input(placeholder="Текст сообщения")
-          button.button Отправить письмо
-    footer
-      .wrapper
-        span &copy; 2011–2016 СпецОценка.by
-        a.dev(href="http://ash-web.by" target="_blank") Разработано 
-          b.dev--link ash-web.by
+block menu
+  +menu
 
-    script(src="js/slider.js")
-    script(src="js/main.js")
+block body
+  +slider([1, 2, 3])
+
+  section.main
+    h1 Оценка и бизнес-планирование
+    p Мы 
+      b оценим
+      |  для вас 
+      b практически всё
+      |  , кроме золота, бриллиантов и оружия.
+    p Не зависимо от того, кто вы (физическое или юридическое лицо) и 
+      b вы имеете имущество
+      | , то 
+      b мы определим, сколько оно стоит для продажи, залога, аренды
+      |  и 
+      b других целей
+      | .
+    p Если же 
+      b вы не имеете имущества
+      | , но очень хотите его приобрести, получить в подарок, наследовать, выменять, одолжить, заказать, построить, то 
+      b мы определим, сколько оно стоит для вас
+      | , а вы уже сами решите – нужно ли вам это имущество по такой цене.
+    p Если вы хотите узнать, как будет, или как может развиваться ваш бизнес, то 
+      b мы разработаем 
+      | вам 
+      b бизнес-план 
+      |  или 
+      b серьезный инвестиционный проект
+      | , который станет вашим надежным помощником.
+    p
+      a.button(href="#contacts") Обратитесь к нам
+
+  section.services
+    h2 Наши услуги
+    article.services--item
+      h3 Земельные участки
+      .services--wrap
+        p Оценка для кредитования под залог, лизинга, страхования, отчуждения, постановки на баланс, внесения в установочный фонд, переоценки основных средств, судебных рабирательств
+        img.services--icon(src="/assets/img/icons/land.svg")
+    article.services--item 
+      h3 Недвижимость
+      .services--wrap
+        p Жилые, коммерческие и производственные объекты. Здания, сооружения, дома, квартиры, офисы
+        img.services--icon(src="/assets/img/icons/realestate.svg")
+    article.services--item 
+      h3 Оборудование и&nbsp;транспорт
+      .services--wrap
+        p Станки, приборы, мебель, технологические комплексы и поточные линии, офисное и другое оборудование и т.д. Автомобили, машины, железнодорожная, воздушная и другая техника
+        img.services--icon(src="/assets/img/icons/tools.svg")
+    article.services--item 
+      h3 Бизнес-планирование
+      .services--wrap
+        p 
+          a(href="/business-planning") Разработка бизнес-планов
+          | , которые соответствуют требованиям международного стандарта UNIDO
+        img.services--icon(src="/assets/img/icons/analysis.svg")

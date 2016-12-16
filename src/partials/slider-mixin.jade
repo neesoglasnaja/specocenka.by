@@ -1,0 +1,6 @@
+mixin slider(slides)
+  section.slider
+    ul.slides
+      each slide in slides
+        li.slides--item
+          img(src="/assets/img/slides/#{slide}.jpg")
