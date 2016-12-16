@@ -1,0 +1,23 @@
+extends ../../partials/layout
+
+block head
+  +head('Оценка недвижимости и недвижимого иммущества')
+
+block menu
+  +menu('realty')
+
+block body
+  +slider([2])
+
+  section.breadcrumbs
+    ul.breadcrumbs-list
+      li.breadcrumbs-list--item
+        a(href="/") Главная
+      li.breadcrumbs-list--item
+        a(href="/evaluation") Оценка
+
+  section.main
+    h1 Оценка недвижимости
+    p hello
+
+  

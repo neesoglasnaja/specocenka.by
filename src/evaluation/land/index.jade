@@ -1,0 +1,21 @@
+extends ../../partials/layout
+
+block head
+  +head('Оценка земли и земельных участков')
+
+block menu
+  +menu('land')
+
+block body
+  +slider([1])
+
+  section.breadcrumbs
+    ul.breadcrumbs-list
+      li.breadcrumbs-list--item
+        a(href="/") Главная
+
+  section.main
+    h1 Оценка земли и земельных участков
+    p hello
+
+  

@@ -1,0 +1,21 @@
+extends ../../partials/layout
+
+block head
+  +head('Оценка оборудования и транспорта')
+
+block menu
+  +menu('equipment')
+
+block body
+  +slider([3])
+
+  section.breadcrumbs
+    ul.breadcrumbs-list
+      li.breadcrumbs-list--item
+        a(href="/") Главная
+
+  section.main
+    h1 Оценка земли и земельных участков
+    p hello
+
+  

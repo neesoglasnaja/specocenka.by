@@ -1,0 +1,21 @@
+extends ../partials/layout
+
+block head
+  +head('Создание и разработка бизнес-планов')
+
+block menu
+  +menu('business')
+
+block body
+  +slider([1, 2, 3])
+
+  section.breadcrumbs
+    ul.breadcrumbs-list
+      li.breadcrumbs-list--item
+        a(href="/") Главная
+
+  section.main
+    h1 Бизнес-планирование
+    p hello
+
+  

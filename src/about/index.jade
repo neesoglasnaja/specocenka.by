@@ -1,0 +1,16 @@
+extends ../partials/layout
+
+block head
+  +head('О нас')
+
+block menu
+  +menu('about')
+
+block body
+  +slider([1, 2, 3])
+
+  section.main
+    h1 О нас
+    p hello
+
+  
