@@ -6,6 +6,7 @@ var postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer');
 var csso = require('gulp-csso');
 var image = require('gulp-image');
+var ext_replace = require('gulp-ext-replace');
 
 var config = {
     css: './src/assets/styles/partials/**/*.css',
@@ -21,6 +22,7 @@ gulp.task('jade', function() {
         .pipe(jade({
             pretty: true
         }))
+        .pipe(ext_replace('.php'))
         .pipe(gulp.dest(config.dist))
         .pipe(browserSync.stream());
 });

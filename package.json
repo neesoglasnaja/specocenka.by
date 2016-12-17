@@ -9,6 +9,7 @@
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-csso": "^2.0.0",
+    "gulp-ext-replace": "^0.3.0",
     "gulp-image": "^2.7.2",
     "gulp-jade": "^1.1.0",
     "gulp-postcss": "^6.1.1",
