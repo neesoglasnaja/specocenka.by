@@ -9,7 +9,7 @@ html(dir='ltr', lang='ru')
   body
     main
       header 
-        a.logo(href="/") СпецОценка.by
+        a.logo(href="/" title="СпецОценка.by - Оценка земельных участков, недвижимости, оборудования и транспорта. Бизнес-планирование") СпецОценка.by
         nav
           input.toggle--checkbox(type="checkbox", id="menu")
           label(for="menu").toggle--button
@@ -23,7 +23,7 @@ html(dir='ltr', lang='ru')
         ol.steps
           li.steps--item
             p Позвоните нам по телефону 
-              a(href="tel:+375293452765") +375 29 345-27-65
+              a(href="tel:+375293452765" title="Позвонить по номеру +375 29 345-27-65") +375 29 345-27-65
               |  или обратитесь через контактную форму на сайте
           li.steps--item
             p Мы подпишем с вами договор и задание на оценку
@@ -40,13 +40,13 @@ html(dir='ltr', lang='ru')
           h3 Контактные данные
           p г. Минск, Республика Беларусь 
           p Мобильный: 
-            a(href="tel:+375293452765") +375 29 345-27-65
+            a(href="tel:+375293452765" title="Позвонить по номеру +375 29 345-27-65") +375 29 345-27-65
             | , 
-            a(href="tel:+375297658433") +375 29 765-84-33
+            a(href="tel:+375297658433" title="Позвонить по номеру +375 29 765-84-33") +375 29 765-84-33
           p Телефон/факс: 
-            a(href="tel:+375172804341") +375 17 280-43-41
+            a(href="tel:+375172804341" title="Позвонить по номеру +375 17 280-43-41") +375 17 280-43-41
           p E-mail: 
-            a(href="mailto:info@specocenka.by") info@specocenka.by
+            a(href="mailto:info@specocenka.by" title="Написать письмо на info@specocenka.by") info@specocenka.by
         form.contacts--form
           h3 Напишите нам
           input.input.__half(placeholder="Имя")
@@ -55,13 +55,13 @@ html(dir='ltr', lang='ru')
           .contacts--form--row
             p 
               span Текст на картинке
-              img.captcha(src="", width=110, height=50)
+              img.captcha(src="", width=110, height=50, alt="Текст")
           button.button Отправить письмо
 
     footer
       .wrapper
         span &copy; 2011–2016 СпецОценка.by
-        a.dev(href="http://ash-web.by" target="_blank") Разработано 
+        a.dev(href="http://ash-web.by" target="_blank" title="Разработано ash-web.by") Разработано 
           b.dev--link ash-web.by
 
     script(src="/assets/js/slider.js")
