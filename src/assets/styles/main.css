@@ -90,3 +90,8 @@ main {
 textarea {
     height: 120px;
 }
+
+#map {
+    height: 400px;
+    background-color: $color-main--light;
+}

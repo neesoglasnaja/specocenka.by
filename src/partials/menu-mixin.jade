@@ -1,14 +1,14 @@
 mixin menu(a)
   ul.menu
     li.menu--item
-      a.__arrow(href="/evaluation" class=(a=='evaluation'? '__active' : '')) Оценка
+      a.__arrow(href="/evaluation" class=(a=='evaluation'? '__active' : '') title="Оценка земельных участков, недвижимости, оборудования и транспорта") Оценка
       ul.menu--submenu
         li
           a(href="/evaluation/land" class=(a=='land'? '__active' : '')) Земельные участки
         li
           a(href="/evaluation/realty" class=(a=='realty'? '__active' : '')) Недвижимость
         li
-          a(href="/evaluation/equipment-and-transport" class=(a=='equipment'? '__active' : '')) Оборудование и транспорт
+          a(href="/evaluation/equipment-and-transport" class=(a=='equipment'? '__active' : '')) Оборудование и&nbsp;транспорт
     li.menu--item
       a(href="/business-planning" class=(a=='business'? '__active' : '')) Бизнес-планирование
     li.menu--item

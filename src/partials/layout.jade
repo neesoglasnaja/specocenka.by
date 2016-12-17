@@ -52,6 +52,10 @@ html(dir='ltr', lang='ru')
           input.input.__half(placeholder="Имя")
           input.input.__half(placeholder="Email")
           textarea.input(placeholder="Текст сообщения")
+          .contacts--form--row
+            p 
+              span Текст на картинке
+              img.captcha(src="", width=110, height=50)
           button.button Отправить письмо
 
     footer
