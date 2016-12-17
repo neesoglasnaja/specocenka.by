@@ -4,4 +4,5 @@ var domReady = function(callback) {
 
 domReady(function() {
     Slider.init();
+    ContactForm.init();
 });

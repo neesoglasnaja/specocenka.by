@@ -81,9 +81,13 @@ main {
     }
     &.__half {
         width: 48%;
+        vertical-align: top;
         & + & {
             margin-left: 4%;
         }
+    }
+    &.__error {
+        border-bottom-color: $color--error;
     }
 }
 
