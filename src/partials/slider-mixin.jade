@@ -1,6 +1,6 @@
 mixin slider(slides)
-  section.slider
+  .slider
     ul.slides
       each slide in slides
         li.slides--item
-          img(src="/assets/img/slides/#{slide}.jpg")
+          img(src="/assets/img/slides/#{slide.img}.jpg" alt=slide.alt)
