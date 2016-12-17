@@ -23,6 +23,7 @@
             overflow: hidden;
             transition: opacity 1s;
             text-align: center;
+            line-height: 0;
             img {
                 width: auto;
                 height: auto;

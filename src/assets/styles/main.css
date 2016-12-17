@@ -76,6 +76,8 @@ main {
     box-sizing: border-box;
     margin-bottom: 20px;
     transition: border 0.3s;
+    outline: none;
+    border-radius: 0;
     &:focus {
         border-bottom-color: $color-main;
     }
