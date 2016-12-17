@@ -1,15 +1,15 @@
 mixin menu(a)
   ul.menu
     li.menu--item
-      a.__arrow(href="/evaluation" class=(a=='evaluation'? '__active' : '') title="Оценка земельных участков, недвижимости, оборудования и транспорта") Оценка
+      a.__arrow(href="/test/evaluation" class=(a=='evaluation'? '__active' : '') title="Оценка земельных участков, недвижимости, оборудования и транспорта") Оценка
       ul.menu--submenu
         li
-          a(href="/evaluation/land" class=(a=='land'? '__active' : '') title="Оценка земельных участков") Земельные участки
+          a(href="/test/evaluation/land" class=(a=='land'? '__active' : '') title="Оценка земельных участков") Земельные участки
         li
-          a(href="/evaluation/realty" class=(a=='realty'? '__active' : '') title="Оценка недвижимости") Недвижимость
+          a(href="/test/evaluation/realty" class=(a=='realty'? '__active' : '') title="Оценка недвижимости") Недвижимость
         li
-          a(href="/evaluation/equipment-and-transport" class=(a=='equipment'? '__active' : '') title="Оценка оборудования и транспорта") Оборудование и&nbsp;транспорт
+          a(href="/test/evaluation/equipment-and-transport" class=(a=='equipment'? '__active' : '') title="Оценка оборудования и транспорта") Оборудование и&nbsp;транспорт
     li.menu--item
-      a(href="/business-planning" class=(a=='business'? '__active' : '') title="Бизнес-планирование") Бизнес-планирование
+      a(href="/test/business-planning" class=(a=='business'? '__active' : '') title="Бизнес-планирование") Бизнес-планирование
     li.menu--item
-      a(href="/about" class=(a=='about'? '__active' : '') title="О проекте СпецОценка.by") О нас
+      a(href="/test/about" class=(a=='about'? '__active' : '') title="О проекте СпецОценка.by") О нас
