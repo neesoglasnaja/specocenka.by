@@ -1,8 +1,8 @@
 extends ../partials/layout
 
 block head
-  +head('О нас')
-  script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=cd226Rj9CzeomLbniyBBKwXZ6kqscdKq&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=map")
+  +head({ link: 'about/' }, 'О нас')
+  script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=cd226Rj9CzeomLbniyBBKwXZ6kqscdKq&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false&amp;id=map")
 
 block menu
   +menu('about')
@@ -13,13 +13,26 @@ block body
   section.breadcrumbs
     ul.breadcrumbs-list
       li.breadcrumbs-list--item
-        a(href="/test/") Главная
+        a(href="/test/", title="СпецОценка.by") Главная
 
   section.main
     h1 О нас
-    p Мы оценили более 1000 объектов по всей Беларуси и за ее пределами.
-  section
-    h2 Объекты оценки 
+    p 
+      b Мы
+      |  - 
+      b группа специалистов, оказывающих профессиональные услуги по оценке имущественных прав и бизнес-планированию.
+      |  Многолетний опыт работы и большой профессиональный потенциал позволяет нам решать широкий спектр разнообразных задач.
+    p Наши оцeнщики имеют стаж рабoты с 1998 г., oтрабoтав 5 лет пo лицензии Минэкoнoмики РБ на oсуществление экспертных рабoт пo oценке имущества, внoсимoгo в виде нeденeжнoгo вклада в уставный фoнд юридическoгo лица; аттестoваны кoмиссией, сoзданнoй Сoветoм пo аттестации и лицензирoванию деятельнoсти субъектoв хoзяйствoвания Министерства экoнoмики Республики Беларусь с присвoением Квалификациoнных аттестатoв.
+    p Согласно Указа Президента Республики Беларусь от 13 октября 2006 г. N615 "Об oцeнoчнoй деятельнoсти в Республике Беларусь", вступившим в силу 20 мая 2007 года, наши оценщики аттестованы, а в дальнейшем и неоднократно переаттестованы, Государственным комитетом по имуществу Республики Беларусь. 
+    p Являясь сотрудниками государственных и частных предприятий, а также зарегистрированные как индивидуальные предприниматели, наши специалисты помогут вам 
+      a(href="") оценить имущество любой формы собственности
+      | , а также 
+      a(href="") разработать бизнес-план любой сложности
+      | , по приемлемой для вас стоимости услуг и бесплатно проконсультируют по волнующим вас вопросам.
+    p
+      a.button(href="#contacts", title="Перейти к контактной форме") Связаться с нами
+  section.main
+    h2 География объектов оценки 
     div#map
 
   

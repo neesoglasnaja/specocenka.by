@@ -1,8 +1,7 @@
 extends ../partials/layout
 
 block head
-  +head('Создание и разработка бизнес-планов')
-
+  +head({ link: 'business-planning/', img: 'plan-' }, 'Создание и разработка бизнес-планов')
 block menu
   +menu('business')
 
@@ -12,7 +11,7 @@ block body
   section.breadcrumbs
     ul.breadcrumbs-list
       li.breadcrumbs-list--item
-        a(href="/test/") Главная
+        a(href="/test/", title="СпецОценка.by") Главная
 
   section.main
     h1 Бизнес-планиро&shy;ва&shy;ние
@@ -37,7 +36,7 @@ block body
       | Мы поможем вам с разработкой бизнес-планов  
       b в короткие сроки и профессионально!
     p
-      a.button(href="#contacts") Связаться с нами
+      a.button(href="#contacts", title="Перейти к контактной форме") Связаться с нами
 
 
   

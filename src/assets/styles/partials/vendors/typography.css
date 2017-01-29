@@ -6,6 +6,7 @@ $leading: calc($baseLineHeight * 1rem);
 $scale: 1.414;
 $textColor: #666;
 $subheaderColor: #222;
+
 /* Setup */
 
 html {
@@ -23,15 +24,23 @@ p {
     margin-top: $leading;
     margin-bottom: 0;
     color: $textColor;
-    a {
-        text-decoration: none;
-        color: $color-main;
-        border-bottom: 1px solid $color-main--light;
-        transition: color 0.5s, border 0.5s;
-        &:hover,
-        &:focus{
-            color: $color-main--dark;
-            border-bottom-color: $color-main;
+}
+
+section {
+    p,
+    ul,
+    ol,
+    h3 {
+        a {
+            text-decoration: none;
+            color: $color-main;
+            border-bottom: 1px solid $color-main--light;
+            transition: color 0.5s, border 0.5s;
+            &:hover,
+            &:focus {
+                color: $color-main--dark;
+                border-bottom-color: $color-main;
+            }
         }
     }
 }
@@ -87,7 +96,7 @@ h2 {
     margin-bottom: calc(2 * $leading);
     text-align: center;
     position: relative;
-    &:after{
+    &:after {
         content: '';
         position: absolute;
         left: 42%;

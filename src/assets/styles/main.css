@@ -101,3 +101,7 @@ textarea {
     height: 400px;
     background-color: $color-main--light;
 }
+
+.__phone{
+    white-space: pre;
+}
