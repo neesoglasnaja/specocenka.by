@@ -7,7 +7,7 @@ var ContactForm = {
             var formData = new FormData(document.forms.contactForm);
 
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/test/mail.php", true);
+            xhr.open("POST", "/mail.php", true);
             xhr.send(formData);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState != 4) return;
