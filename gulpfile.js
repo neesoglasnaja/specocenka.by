@@ -7,6 +7,8 @@ var postcss = require('gulp-postcss'),
 var csso = require('gulp-csso');
 var image = require('gulp-image');
 var ext_replace = require('gulp-ext-replace');
+var uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
 var config = {
     css: './src/assets/styles/partials/**/*.css',
@@ -20,7 +22,7 @@ var config = {
 gulp.task('jade', function() {
     return gulp.src(config.jade)
         .pipe(jade({
-            pretty: true
+            pretty: false
         }))
         .pipe(ext_replace('.php'))
         .pipe(gulp.dest(config.dist))
@@ -33,7 +35,6 @@ gulp.task('css', function() {
             postcss([
                 require("postcss-easy-import"),
                 require('precss')({}),
-                require('postcss-calc')({warnWhenCannotResolve: true}),
                 autoprefixer({ browsers: ['last 2 versions'] })
             ])
         )
@@ -58,6 +59,13 @@ gulp.task('js', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('minify', function() {
+  gulp.src(config.js)
+    .pipe(concat('script.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(config.dist + '/assets/js'))
+});
+
 gulp.task('default', function() {
     browserSync.init({
         server: {
@@ -74,7 +82,7 @@ gulp.task('default', function() {
         gulp.run('images');
     });
     gulp.watch(config.js, function(event) {
-        gulp.run('js');
+        gulp.run('minify');
     });
     gulp.watch(config.html).on('change', browserSync.reload);
 });
