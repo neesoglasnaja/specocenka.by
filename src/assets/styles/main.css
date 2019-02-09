@@ -58,6 +58,8 @@ main {
     font-weight: bold;
     background: transparent;
     transition: background 0.3s, color 0.3s;
+    margin-top: 20px;
+    display: inline-block;
     &:hover,
     &:focus {
         background-color: $color-main;

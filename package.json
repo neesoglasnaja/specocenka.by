@@ -1,9 +1,13 @@
 {
-  "name": "Specocenka.by",
-  "version": "2.0.0",
+  "name": "specocenka.by",
+  "version": "2.1.0",
   "description": "Source code for a website specocenka.by",
   "author": "Aleksandra Shinkevich",
   "homepage": "http://specocenka.by",
+  "scripts": {
+    "dev": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp build"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.11.1",

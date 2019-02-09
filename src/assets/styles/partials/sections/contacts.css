@@ -1,51 +1,13 @@
 .contacts {
     font-size: 0;
-    &--form {
-        width: 60%;
-        font-size: 0;
-        vertical-align: top;
-        margin-top: 30px;
-        display: inline-block;
-        margin-left: 4%;
-        h3 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            display: none;
-        }
-        &--row {
-            font-size: 0.889rem;
-            margin-bottom: 20px;
-            span,
-            span + img {
-                vertical-align: top;
-            }
-            span {
-                opacity: 0.9;
-                margin: 0 20px 0 10px;
-            }
-        }
-        @media (max-width: $mobile-width) {
-            h3 {
-                margin-top: 20px;
-                display: block;
-            }
-        }
-        @media (max-width: $mobile-mid-width) {
-            .input.__half {
-                width: 100%;
-                & + .input.__half {
-                    margin-left: 0;
-                }
-            }
-        }
-    }
+    text-align: center;
     &--info {
         display: inline-block;
-        width: 36%;
         font-size: 1rem;
+        margin: 0 auto;
+        text-align: left;
     }
     @media (max-width: $mobile-width) {
-        &--form,
         &--info {
             width: 100%;
             margin-left: 0;

@@ -88,3 +88,10 @@ doc
 
 #dist
 /public/
+/dist/
+
+# VSCode plugin
+.history
+
+
+package-lock.json

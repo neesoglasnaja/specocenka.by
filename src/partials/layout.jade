@@ -2,8 +2,6 @@ include ./head-mixin
 include ./menu-mixin
 include ./slider-mixin
 
-| <?php session_start(); ?>
-
 doctype html
 html(dir='ltr', lang='ru')
   head
@@ -26,7 +24,10 @@ html(dir='ltr', lang='ru')
           li.steps--item
             p Позвоните нам по телефону 
               a.__phone(href="tel:+375293452765" title="Позвонить по номеру +375 29 345-27-65") +375 29 345-27-65
-              |  или обратитесь через контактную форму на сайте
+              |  или напишите письмо на 
+              a(href="mailto:info@specocenka.by" title="Написать письмо на info@specocenka.by") info@specocenka.by
+          li.steps--item
+            p Мы свяжемся с вами и обсудим детали
           li.steps--item
             p Мы подпишем с вами договор и задание на оценку
           li.steps--item
@@ -39,7 +40,6 @@ html(dir='ltr', lang='ru')
       section.contacts
         h2(id="contacts") Связаться с&nbsp;нами
         .contacts--info
-          h3 Контактные данные
           p г. Минск, Республика Беларусь 
           p Мобильный: 
             a.__phone(href="tel:+375293452765" title="Позвонить по номеру +375 29 345-27-65") +375 29 345-27-65
@@ -49,21 +49,10 @@ html(dir='ltr', lang='ru')
             a.__phone(href="tel:+375172804341" title="Позвонить по номеру +375 17 280-43-41") +375 17 280-43-41
           p E-mail: 
             a(href="mailto:info@specocenka.by" title="Написать письмо на info@specocenka.by") info@specocenka.by
-        form.contacts--form(id="contactForm" name="contactForm")
-          h3 Напишите нам
-          input(name="act" value="y" type="hidden")
-          input.input.__half(placeholder="Имя" name="name" id="name")
-          input.input.__half(placeholder="Email" name="email" id="email")
-          textarea.input(placeholder="Текст сообщения" name="message" id="message")
-          .contacts--form--row
-            input.input.__half(placeholder="Текст на картинке" name="keystring" id="keystring")
-            img.captcha(src!="/kcaptcha/?<?php echo session_name()?>=<?php echo session_id()?>", width=110, height=50, alt="Текст", id="key")
-          #success.contacts--form--row
-          button.button(title="Отправить письмо") Отправить письмо
 
     footer
       .wrapper
-        span &copy; 2011–2017 СпецОценка.by
+        span &copy; 2011–2019 СпецОценка.by
         a.dev(href="http://ash-web.by" target="_blank" title="Разработано ash-web.by") Разработано 
           b.dev--link ash-web.by
 

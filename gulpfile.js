@@ -17,14 +17,13 @@ var config = {
     js: './src/assets/js/*.js',
     images: './src/assets/img/**',
     html: "./*.html",
-    dist: "./public"
+    dist: "./docs"
 };
 gulp.task('jade', function() {
     return gulp.src(config.jade)
         .pipe(jade({
             pretty: false
         }))
-        .pipe(ext_replace('.php'))
         .pipe(gulp.dest(config.dist))
         .pipe(browserSync.stream());
 });
@@ -86,3 +85,5 @@ gulp.task('default', function() {
     });
     gulp.watch(config.html).on('change', browserSync.reload);
 });
+
+gulp.task('build', ['jade', 'css', 'images', 'minify']);
